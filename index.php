@@ -27,6 +27,7 @@
                         <th>Tarea</th>
                         <th>Descripcion</th>
                         <th>Fecha</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +43,10 @@
                             <td> <?php echo $fila["nombre"]; ?> </td>
                             <td> <?php echo $fila["descripcion"]; ?> </td>
                             <td> <?php echo $fila["fecha"]; ?> </td>
+                            <td>
+                                <a href="editar_nota.php?id=<?php echo $fila['id'] ?>">Editar</a>
+                                <a href="eliminar_nota.php?id=<?php echo $fila['id'] ?>">Eliminar</a>
+                            </td>
                         </tr>
                     <?php
                     }
