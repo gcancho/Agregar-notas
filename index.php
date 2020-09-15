@@ -20,5 +20,31 @@
                 </form>
             </div>
         </div>
+        <div class="col-md-8">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Tarea</th>
+                        <th>Descripcion</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+
+                    $consulta = "SELECT * FROM tarea";
+                    $resultado = mysqli_query($conexion, $consulta);
+
+                    // mysqli_fetch_array — Obtiene una fila de resultados como un array asociativo
+                    while ($fila = mysqli_fetch_array($resultado)) {
+                    ?>
+                        <tr>
+                            <td> <?php echo $fila["nombre"]; ?> </td>
+                            <td> <?php echo $fila["descripcion"]; ?> </td>
+                            <td> <?php echo $fila["fecha"]; ?> </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+        </div>
     </div>
-</div>
