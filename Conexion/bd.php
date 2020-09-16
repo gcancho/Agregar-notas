@@ -6,7 +6,7 @@ session_start();
 $host = "localhost";
 $usuario = "root";
 $clave = "";
-$database = "bdtareas";
+$database = "temporal_prueba";
 
 $conexion = mysqli_connect($host,$usuario,$clave,$database);
 
