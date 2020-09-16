@@ -32,6 +32,9 @@
         $consulta_actualizar = "UPDATE tarea SET nombre='$nombre', descripcion='$descripcion', fecha='$fecha' WHERE id=$id";
         mysqli_query($conexion,$consulta_actualizar);
 
+        $_SESSION["mensaje"] = "Tarea actualizada";
+        $_SESSION["color_mensaje"] = "warning";
+
         header("Location: index.php");
     }
 

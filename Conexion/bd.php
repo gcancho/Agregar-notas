@@ -1,5 +1,8 @@
 <?php 
 
+// Iniciando sesion
+session_start();
+
 $host = "localhost";
 $usuario = "root";
 $clave = "";

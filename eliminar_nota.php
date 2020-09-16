@@ -9,6 +9,10 @@
         mysqli_query($conexion,$consulta);
 
         header("Location: index.php");
+
+        // Variables de sesion
+        $_SESSION["mensaje"] = "Tarea eliminada";
+        $_SESSION["color_mensaje"] = "danger";
     }
     // $id = $_GET["id"];
 
